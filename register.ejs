@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <script src="/script.js" defer></script>
+</head>
+<body>
+
+  <h2>User Registration</h2>
+
+  <form action="/register" method="POST" onsubmit="return validateForm()">
+    <input type="text" name="name" id="name" placeholder="Name"><br><br>
+    <input type="email" name="email" id="email" placeholder="Email"><br><br>
+    <input type="password" name="password" id="password" placeholder="Password"><br><br>
+    <button type="submit">Register</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p style="color:green;"><%= success %></p>
+  <% } %>
+
+</body>
+</html>
